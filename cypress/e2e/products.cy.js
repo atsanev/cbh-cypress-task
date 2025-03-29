@@ -1,5 +1,6 @@
 import { visitProductsPage, assertProductsPageContents, addProduct, editProduct, searchProduct, deleteProduct } from '../pages/products'
 import users from '../fixtures/users.json'
+import products from '../fixtures/products.json'
 
 describe('Products Page as Admin', () => {
     beforeEach(() => {
@@ -12,19 +13,19 @@ describe('Products Page as Admin', () => {
     })
 
     it('should add a product', () => {  
-        addProduct('Test Product', '100', '10')
+        addProduct(products.name, products.price, products.quantity)
     })
 
     it('should edit a product', () => {
-        editProduct('Test Product', '101', '11')
+        editProduct(products.name, products.price, products.quantity)
     })
 
     it('should search for a product', () => {
-        searchProduct('Test Product')
+        searchProduct(products.name)
     })
 
     it('should delete a product', () => {
-        deleteProduct('Test Product')
+        deleteProduct(products.name)
     })
     
 })

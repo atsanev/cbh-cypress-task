@@ -1,5 +1,5 @@
 {
-  "name": "Using fixtures to represent data",
+  "name": "Test Product Fixture",
   "price": "100",
-  "quantity": "1"
+  "quantity": "10"
 }
