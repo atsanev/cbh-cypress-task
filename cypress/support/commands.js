@@ -34,8 +34,8 @@ Cypress.Commands.add('login', (email, password) => {
 })
 
 Cypress.Commands.add('switchToUser', (userId) => {
-    cy.get('.dropdown-toggle ').click()
-    cy.get('.dropdown-item').contains(`${userId}`).click()
+    cy.contains('Demo').trigger('mouseover')
+    cy.contains(`${userId}`).should('be.visible').click()
 })
 
 

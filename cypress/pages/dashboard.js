@@ -1,6 +1,6 @@
 const productsBtn = '#main-navigation > div:nth-child(2)'
-const discountsBtn = '#main-navigation > div:nth-child(3) > a'
-const ordersBtn = '#main-navigation > div:nth-child(4) > a'
+const discountsBtn = '#main-navigation > div:nth-child(3)'
+const ordersBtn = '#main-navigation > div:nth-child(4)'
 
 export function visitDashboard() {
     cy.visit(Cypress.env('baseUrl'))
@@ -27,20 +27,20 @@ export function assertCustomerAccessToDiscountsUI() {
 }
 
 export function assertCustomerAccessToOrdersUI() {
-    cy.get(ordersBtn).should('be.visible').click();
+    cy.contains('Orders').click();
 }
 
 export function assertCustomerAccessToDiscountsURL() {
-    cy.visit(Cypress.env('baseUrl') + '/discounts');
+    cy.visit(Cypress.env('baseUrl') + 'discounts');
     cy.url().should('not.include', '/discounts');
 }
 
 export function assertCustomerAccessToProductsURL() {
-    cy.visit(Cypress.env('baseUrl') + '/products');
+    cy.visit(Cypress.env('baseUrl') + 'products');
     cy.url().should('not.include', '/products');
 }
 
 export function assertCustomerAccessToOrdersURL() {
-    cy.visit(Cypress.env('baseUrl') + '/orders');
+    cy.visit(Cypress.env('baseUrl') + 'orders');
     cy.url().should('include', '/orders');
 }
