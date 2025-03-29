@@ -1,4 +1,4 @@
-import users from '../fixtures/users.json'
+import users from '../../fixtures/users.json'
 
 
 describe('Login', () => {

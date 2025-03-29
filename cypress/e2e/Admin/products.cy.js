@@ -1,6 +1,6 @@
-import { visitProductsPage, assertProductsPageContents, addProduct, editProduct, searchProduct, deleteProduct } from '../pages/products'
-import users from '../fixtures/users.json'
-import products from '../fixtures/products.json'
+import { visitProductsPage, assertProductsPageContents, addProduct, editProduct, searchProduct, deleteProduct } from '../../pages/products'
+import users from '../../fixtures/users.json'
+import products from '../../fixtures/products.json'
 
 describe('Products Page as Admin', () => {
     beforeEach(() => {

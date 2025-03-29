@@ -1,5 +1,5 @@
-import users from '../fixtures/users.json'
-import { visitDashboard, clickProductsBtn, clickDiscountsBtn, clickOrdersBtn } from '../pages/dashboard'
+import users from '../../fixtures/users.json'
+import { visitDashboard, clickProductsBtn, clickDiscountsBtn, clickOrdersBtn } from '../../pages/dashboard'
 
 
 describe('Dashboard', () => {
