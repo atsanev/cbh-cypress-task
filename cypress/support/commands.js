@@ -32,3 +32,10 @@ Cypress.Commands.add('login', (email, password) => {
     cy.get('#password').type(password)
     cy.get('[type="submit"]').click()
 })
+
+Cypress.Commands.add('switchToUser', (userId) => {
+    cy.get('.dropdown-toggle ').click()
+    cy.get('.dropdown-item').contains(`${userId}`).click()
+})
+
+

@@ -1,4 +1,7 @@
 {
     "email": "anatoli.tsanev@gmail.com",
-    "password": "q2r0gFFIJiBu"
+    "password": "q2r0gFFIJiBu",
+    "adminId": "Administrator",
+    "customerId": "Customer 1",
+    "customer2Id": "Customer 2"
 }
