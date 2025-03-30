@@ -33,8 +33,11 @@ export function assertProductsPageContents() {
 export function addProduct(productName, productPrice, productDescription) {
     cy.get(addProductBtn).should('be.visible').click();
     cy.url().should('include', '/products/create');
+    cy.get(productNameInput).should('be.visible').clear()
     cy.get(productNameInput).should('be.visible').type(productName);
+    cy.get(productPriceInput).should('be.visible').clear()
     cy.get(productPriceInput).should('be.visible').type(productPrice);
+    cy.get(productStockQuantityInput).should('be.visible').clear()
     cy.get(productStockQuantityInput).should('be.visible').type(productDescription);
     cy.get(saveBtn).contains('Save').should('be.visible').click();
     cy.get(productsTable).should('contain', productName);
