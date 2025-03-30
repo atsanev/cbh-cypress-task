@@ -68,6 +68,10 @@ export function assertOrder(quantity) {
     cy.get(orderRow).eq(2).find(orderCell).should('contain', quantity);
 }
 
+export function assertInsufficientQuantity() {
+    cy.contains('Has insufficient stock for product Demo Product').should('be.visible');
+}
+
 export function assertOrderNotVisibleCustomer2() {
     cy.contains('No data').should('be.visible');
 }
